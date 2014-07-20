@@ -48,7 +48,7 @@ Author : Pavlos-Petros Tournaris (p.tournaris@gmail.com)
 
 Google+ : [+Pavlos-Petros Tournaris](https://plus.google.com/u/0/+PavlosPetrosTournaris/)
 
-Thanks to [+Filip Puđak](https://plus.google.com/u/0/117550349320705739707/) and his ProgressPieView that made me think of this View.
+Thanks to [+Filip Puđak](https://plus.google.com/u/0/117550349320705739707/) and his ProgressPieView that helped me think and create this View.
 
 License
 =======
