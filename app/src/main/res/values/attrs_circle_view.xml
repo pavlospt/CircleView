@@ -1,0 +1,15 @@
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="titleText" format="string" />
+        <attr name="subtitleText" format="string" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="subtitleSize" format="dimension" />
+        <attr name="strokeWidth" format="float" />
+        <attr name="fillRadius" format="float" />
+        <attr name="titleColor" format="color" />
+        <attr name="subtitleColor" format="color" />
+        <attr name="fillColor" format="color" />
+        <attr name="strokeColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+</resources>
