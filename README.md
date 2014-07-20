@@ -10,17 +10,17 @@ A Circle View containing Title and Subtitle
 
 Attributes to choose from:
 
-    * `titleText` - The text in the first row.
-    * `subtitleText` - The text in the second row.
-    * `titleSize` - The size of the first row text.
-    * `subtitleSize` - The size of the second row text.
-    * `strokeWidth` - The size of the outter line surrounding the view.
-    * `fillRadius` - The radius of the inner circle.
-    * `titleColor` - The color of the first row text.
-    * `subtitleColor` - The color of the second row text.
-    * `fillColor` - The color of the inner circle.
-    * `strokeColor` - The color of the outter line circle.
-    * `backgroundColor` - the color between the circle and the stroke.
+* `titleText` - The text in the first row.
+* `subtitleText` - The text in the second row.
+* `titleSize` - The size of the first row text.
+* `subtitleSize` - The size of the second row text.
+* `strokeWidth` - The size of the outter line surrounding the view.
+* `fillRadius` - The radius of the inner circle.
+* `titleColor` - The color of the first row text.
+* `subtitleColor` - The color of the second row text.
+* `fillColor` - The color of the inner circle.
+* `strokeColor` - The color of the outter line circle.
+* `backgroundColor` - the color between the circle and the stroke.
     
 Example
 =======
