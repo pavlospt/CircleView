@@ -4,8 +4,50 @@ CircleView
 A Circle View containing Title and Subtitle
 
 (Ignore the Activity title :P)
+
 ![CircleView](/Screenshots/device-2014-07-20-132345.png)
 
+
+Attributes to choose from:
+
+    * `titleText` - The text in the first row.
+    * `subtitleText` - The text in the second row.
+    * `titleSize` - The size of the first row text.
+    * `subtitleSize` - The size of the second row text.
+    * `strokeWidth` - The size of the outter line surrounding the view.
+    * `fillRadius` - The radius of the inner circle.
+    * `titleColor` - The color of the first row text.
+    * `subtitleColor` - The color of the second row text.
+    * `fillColor` - The color of the inner circle.
+    * `strokeColor` - The color of the outter line circle.
+    * `backgroundColor` - the color between the circle and the stroke.
+    
+Example
+=======
+```xml
+ <com.github.circleView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:titleText="title"
+        app:subtitleText="subtitle"
+        app:titleSize="12dp"
+        app:subtitleSize="9dp"
+        app:titleColor="@color/white"
+        app:subtitleColor="@color/red"
+        app:strokeColor="@color/blue"
+        app:backgroundColor="@color/gray"
+        app:fillColor="@color/green"
+        app:fillRadius="0.9"
+        app:strokeWidth="5"/>
+```
+
+Credits
+=======
+Author : Pavlos-Petros Tournaris (p.tournaris@gmail.com)
+
+
+Thanks to [+Filip Puđak](https://plus.google.com/u/0/117550349320705739707/) and his ProgressPieView that made me think of this View.
 
 License
 =======
