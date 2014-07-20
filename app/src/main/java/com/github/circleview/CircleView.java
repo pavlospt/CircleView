@@ -77,20 +77,25 @@ public class CircleView extends View {
         final TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.CircleView, defStyle, 0);
 
-        mTitleText = a.getString(R.styleable.CircleView_titleText);
-        mSubtitleText = a.getString(R.styleable.CircleView_subtitleText);
+        if(a.hasValue(R.styleable.CircleView_titleText)){
+            mTitleText = a.getString(R.styleable.CircleView_titleText);
+        }
 
-        mTitleColor = a.getColor(R.styleable.CircleView_titleColor,mTitleColor);
-        mSubtitleColor = a.getColor(R.styleable.CircleView_subtitleColor,mSubtitleColor);
-        mBackgroundColor = a.getColor(R.styleable.CircleView_backgroundColor,mBackgroundColor);
-        mStrokeColor = a.getColor(R.styleable.CircleView_strokeColor,mStrokeColor);
-        mFillColor = a.getColor(R.styleable.CircleView_fillColor,mFillColor);
+        if(a.hasValue(R.styleable.CircleView_subtitleText)){
+            mSubtitleText = a.getString(R.styleable.CircleView_subtitleText);
+        }
 
-        mTitleSize = a.getDimension(R.styleable.CircleView_titleSize,mTitleSize);
-        mSubtitleSize = a.getDimension(R.styleable.CircleView_subtitleSize,mSubtitleSize);
+        mTitleColor = a.getColor(R.styleable.CircleView_titleColor,DEFAULT_TITLE_COLOR);
+        mSubtitleColor = a.getColor(R.styleable.CircleView_subtitleColor,DEFAULT_SUBTITLE_COLOR);
+        mBackgroundColor = a.getColor(R.styleable.CircleView_backgroundColorValue,DEFAULT_BACKGROUND_COLOR);
+        mStrokeColor = a.getColor(R.styleable.CircleView_strokeColorValue,DEFAULT_STROKE_COLOR);
+        mFillColor = a.getColor(R.styleable.CircleView_fillColor,DEFAULT_FILL_COLOR);
 
-        mStrokeWidth = a.getFloat(R.styleable.CircleView_strokeWidth,mStrokeWidth);
-        mFillRadius = a.getFloat(R.styleable.CircleView_fillRadius,mFillRadius);
+        mTitleSize = a.getDimension(R.styleable.CircleView_titleSize,DEFAULT_TITLE_SIZE);
+        mSubtitleSize = a.getDimension(R.styleable.CircleView_subtitleSize,DEFAULT_SUBTITLE_SIZE);
+
+        mStrokeWidth = a.getFloat(R.styleable.CircleView_strokeWidthSize,DEFAULT_STROKE_WIDTH);
+        mFillRadius = a.getFloat(R.styleable.CircleView_fillRadius,DEFAULT_FILL_RADIUS);
 
         a.recycle();
 
@@ -133,6 +138,12 @@ public class CircleView extends View {
 
         mInnerRectF = new RectF();
 
+    }
+
+    private void invalidateTextPaints(){
+        mTitleTextPaint.setTextSize(mTitleSize);
+        mSubTextPaint.setTextSize(mSubtitleSize);
+        invalidate();
     }
 
     @Override
@@ -212,7 +223,7 @@ public class CircleView extends View {
      * @param subtitle The example string attribute value to use.
      */
     public void setSubtitleText(String subtitle) {
-        mTitleText = subtitle;
+        mSubtitleText = subtitle;
         invalidate();
     }
 
@@ -315,7 +326,7 @@ public class CircleView extends View {
      */
     public void setTitleSize(float titleSize) {
         mTitleSize = titleSize;
-        invalidate();
+        invalidateTextPaints();
     }
 
     /**
@@ -331,8 +342,8 @@ public class CircleView extends View {
      * @param subtitleSize The subtitle size dimension attribute value to use.
      */
     public void setSubtitleSize(float subtitleSize) {
-        mTitleSize = subtitleSize;
-        invalidate();
+        mSubtitleSize = subtitleSize;
+        invalidateTextPaints();
     }
 
 }
