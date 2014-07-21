@@ -146,6 +146,13 @@ public class CircleView extends View {
         invalidate();
     }
 
+    private void invalidatePaints(){
+        mBackgroundPaint.setColor(mBackgroundColor);
+        mStrokePaint.setColor(mStrokeColor);
+        mFillPaint.setColor(mFillColor);
+        invalidate();
+    }
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -257,7 +264,7 @@ public class CircleView extends View {
      */
     public void setStrokeColor(int strokeColor) {
         mStrokeColor = strokeColor;
-        invalidate();
+        invalidatePaints();
     }
 
     /**
@@ -266,7 +273,7 @@ public class CircleView extends View {
      */
     public void setBackgroundColor(int backgroundColor) {
         mBackgroundColor = backgroundColor;
-        invalidate();
+        invalidatePaints();
     }
 
     /**
@@ -275,7 +282,7 @@ public class CircleView extends View {
      */
     public void setFillColor(int fillColor) {
         mFillColor = fillColor;
-        invalidate();
+        invalidatePaints();
     }
 
     /**
