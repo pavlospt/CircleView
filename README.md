@@ -3,8 +3,6 @@ CircleView
 
 A Circle View containing Title and Subtitle
 
-(Ignore the Activity title :P)
-
 ![CircleView](/Screenshots/Screenshot_8.png)
 
 
