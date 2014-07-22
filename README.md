@@ -49,7 +49,7 @@ Add the following line to your project's `build.gradle` file:
 
 ```maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }```
 
-Then add the dependency to your module's build.gradle: 
+Then add the dependency to your module's `build.gradle` file: 
 
 ```compile 'com.github.pavlospt:circleview:1.0-SNAPSHOT' ```
 
