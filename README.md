@@ -5,7 +5,7 @@ A Circle View containing Title and Subtitle
 
 (Ignore the Activity title :P)
 
-![CircleView](/Screenshots/device-2014-07-20-132345.png)
+![CircleView](/Screenshots/Screenshot_8.png)
 
 
 Attributes to choose from:
