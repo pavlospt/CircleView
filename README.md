@@ -51,6 +51,8 @@ Then add the dependency to your module's `build.gradle` file:
 
 ```compile 'com.github.pavlospt:circleview:1.0-SNAPSHOT' ```
 
+***As per issue #2 states there is a conflict with Gradle at the moment. If you want to use the View just copy and paste CircleView.java and values/attrs_circle_view.xml in your project, till I can fix the issue (roughly till the next week it will be fixed)***
+
 
 Credits
 =======
