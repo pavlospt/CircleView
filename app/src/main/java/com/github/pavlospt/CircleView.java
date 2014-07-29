@@ -15,6 +15,7 @@ public class CircleView extends View {
 
     private static int DEFAULT_TITLE_COLOR = Color.CYAN;
     private static int DEFAULT_SUBTITLE_COLOR = Color.WHITE;
+	
 
     private static String DEFAULT_TITLE = "Title";
     private static String DEFAULT_SUBTITLE = "Subtitle";
