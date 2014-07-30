@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Circleview : A Circle View containing Title and Subtitle">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Circleview</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/pavlospt/CircleView">View on GitHub</a>
+
+          <h1 id="project_title">Circleview</h1>
+          <h2 id="project_tagline">A Circle View containing Title and Subtitle</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/pavlospt/CircleView/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/pavlospt/CircleView/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="circleview" class="anchor" href="#circleview"><span class="octicon octicon-link"></span></a>CircleView</h1>
+
+<p>A Circle View containing Title and Subtitle</p>
+
+<p><img src="/Screenshots/Screenshot_8.png" alt="CircleView"></p>
+
+<p>Attributes to choose from:</p>
+
+<ul>
+<li>
+<code>titleText</code> - The text in the first row.</li>
+<li>
+<code>subtitleText</code> - The text in the second row.</li>
+<li>
+<code>titleSize</code> - The size of the first row text.</li>
+<li>
+<code>subtitleSize</code> - The size of the second row text.</li>
+<li>
+<code>strokeWidth</code> - The size of the outter line surrounding the view.</li>
+<li>
+<code>fillRadius</code> - The radius of the inner circle.</li>
+<li>
+<code>titleColor</code> - The color of the first row text.</li>
+<li>
+<code>subtitleColor</code> - The color of the second row text.</li>
+<li>
+<code>fillColor</code> - The color of the inner circle.</li>
+<li>
+<code>strokeColor</code> - The color of the outter line circle.</li>
+<li>
+<code>backgroundColor</code> - the color between the circle and the stroke.</li>
+</ul><h1>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h1>
+
+<div class="highlight highlight-xml"><pre> <span class="nt">&lt;com.github.circleView</span>
+        <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
+        <span class="na">android:layout_width=</span><span class="s">"300dp"</span>
+        <span class="na">android:layout_height=</span><span class="s">"300dp"</span>
+        <span class="na">app:titleText=</span><span class="s">"title"</span>
+        <span class="na">app:subtitleText=</span><span class="s">"subtitle"</span>
+        <span class="na">app:titleSize=</span><span class="s">"12dp"</span>
+        <span class="na">app:subtitleSize=</span><span class="s">"9dp"</span>
+        <span class="na">app:titleColor=</span><span class="s">"@color/white"</span>
+        <span class="na">app:subtitleColor=</span><span class="s">"@color/red"</span>
+        <span class="na">app:strokeColor=</span><span class="s">"@color/blue"</span>
+        <span class="na">app:backgroundColor=</span><span class="s">"@color/gray"</span>
+        <span class="na">app:fillColor=</span><span class="s">"@color/green"</span>
+        <span class="na">app:fillRadius=</span><span class="s">"0.9"</span>
+        <span class="na">app:strokeWidth=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+</pre></div>
+
+<h1>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How To Use</h1>
+
+<p>Add the following line to your project's <code>build.gradle</code> file:</p>
+
+<p><code>maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }</code></p>
+
+<p>Then add the dependency to your module's <code>build.gradle</code> file: </p>
+
+<p><code>compile 'com.github.pavlospt:circleview:1.0-SNAPSHOT'</code></p>
+
+<p><strong><em>As per issue #2 states there is a conflict with Gradle at the moment. If you want to use the View just copy and paste CircleView.java and values/attrs_circle_view.xml in your project, till I can fix the issue (roughly till the next week it will be fixed)</em></strong></p>
+
+<h1>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h1>
+
+<p>Author : Pavlos-Petros Tournaris (<a href="mailto:p.tournaris@gmail.com">p.tournaris@gmail.com</a>)</p>
+
+<p>Google+ : <a href="https://plus.google.com/u/0/+PavlosPetrosTournaris/">+Pavlos-Petros Tournaris</a></p>
+
+<p>Thanks to <a href="https://plus.google.com/u/0/117550349320705739707/">+Filip Puđak</a> and his ProgressPieView that helped me think and create this View.</p>
+
+<h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
+
+<pre><code>Copyright 2014 Pavlos-Petros Tournaris
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Circleview maintained by <a href="https://github.com/pavlospt">pavlospt</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
