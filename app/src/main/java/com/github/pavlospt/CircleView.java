@@ -13,23 +13,30 @@ import android.view.View;
 
 public class CircleView extends View {
 
+    //Default Text Colors
     private static int DEFAULT_TITLE_COLOR = Color.CYAN;
     private static int DEFAULT_SUBTITLE_COLOR = Color.WHITE;
 	
 
+    //Default Text
     private static String DEFAULT_TITLE = "Title";
     private static String DEFAULT_SUBTITLE = "Subtitle";
 
+    //Default Text Size
     private static float DEFAULT_TITLE_SIZE = 25f;
     private static float DEFAULT_SUBTITLE_SIZE = 20f;
 
+    //Default Colors
     private static int DEFAULT_STROKE_COLOR = Color.CYAN;
     private static int DEFAULT_BACKGROUND_COLOR = Color.WHITE;
     private static int DEFAULT_FILL_COLOR = Color.DKGRAY;
 
+    //Default Size
     private static float DEFAULT_STROKE_WIDTH = 5f;
     private static float DEFAULT_FILL_RADIUS = 0.9f;
 
+
+    //Default View Size
     private static final int DEFAULT_VIEW_SIZE = 96;
 
     private int mTitleColor = DEFAULT_TITLE_COLOR;
@@ -72,6 +79,7 @@ public class CircleView extends View {
         init(attrs, defStyle);
     }
 
+    //Initializes the View
     private void init(AttributeSet attrs, int defStyle) {
         final TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.CircleView, defStyle, 0);
