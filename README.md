@@ -43,7 +43,9 @@ Example
 How To Use
 ==========
 
-Add the dependency to your module's `build.gradle` file: 
+You can search us on *Gradle,please* http://gradleplease.appspot.com/ or just add 
+
+the dependency to your module's `build.gradle` file: 
 
 ```compile 'com.github.pavlospt:circleview:1.1' ```
 
