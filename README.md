@@ -58,6 +58,8 @@ Google+ : [+Pavlos-Petros Tournaris](https://plus.google.com/u/0/+PavlosPetrosTo
 
 Thanks to [+Filip Puđak](https://plus.google.com/u/0/117550349320705739707/) and his ProgressPieView that helped me think and create this View.
 
+(In case you use this in your app let me know to make a list of apps that use it! )
+
 License
 =======
 
