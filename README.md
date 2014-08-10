@@ -56,6 +56,10 @@ Author : Pavlos-Petros Tournaris (p.tournaris@gmail.com)
 
 Google+ : [+Pavlos-Petros Tournaris](https://plus.google.com/u/0/+PavlosPetrosTournaris/)
 
+Facebook : [Pavlos-Petros Tournaris](https://www.facebook.com/pavlospt)
+
+LinkedIn : [Pavlos-Petros Tournaris](https://www.linkedin.com/pub/pavlos-petros-tournaris/44/abb/218)
+
 Thanks to [+Filip Puđak](https://plus.google.com/u/0/117550349320705739707/) and his ProgressPieView that helped me think and create this View.
 
 (In case you use this in your app let me know to make a list of apps that use it! )
