@@ -5,6 +5,8 @@ A Circle View containing Title and Subtitle
 
 ![CircleView](/Screenshots/Screenshot_8.png)
 
+[![Android Arsenal](http://img.shields.io/badge/Android%20Arsenal-CircleView-blue.svg)](http://android-arsenal.com/details/1/796)
+
 
 Attributes to choose from:
 
