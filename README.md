@@ -66,6 +66,11 @@ Thanks to [+Filip Puđak](https://plus.google.com/u/0/117550349320705739707/) an
 
 (In case you use this in your app let me know to make a list of apps that use it! )
 
+Apps using this library
+=======================
+
+Hungry (https://play.google.com/store/apps/details?id=com.hungry)
+
 License
 =======
 
