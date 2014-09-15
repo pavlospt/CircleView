@@ -49,7 +49,7 @@ You can search us on *Gradle,please* http://gradleplease.appspot.com/ or just ad
 
 the dependency to your module's `build.gradle` file: 
 
-```compile 'com.github.pavlospt:circleview:1.1' ```
+```compile 'com.github.pavlospt:circleview:1.2' ```
 
 
 Credits
