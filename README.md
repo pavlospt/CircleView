@@ -19,8 +19,8 @@ Attributes to choose from:
 * `titleColor` - The color of the first row text.
 * `subtitleColor` - The color of the second row text.
 * `fillColor` - The color of the inner circle.
-* `strokeColor` - The color of the outter line circle.
-* `backgroundColor` - the color between the circle and the stroke.
+* `strokeColorValue` - The color of the outter line circle.
+* `backgroundColorValue` - the color between the circle and the stroke.
     
 Example
 =======
@@ -35,8 +35,8 @@ Example
         app:subtitleSize="9dp"
         app:titleColor="@color/white"
         app:subtitleColor="@color/red"
-        app:strokeColor="@color/blue"
-        app:backgroundColor="@color/gray"
+        app:strokeColorValue="@color/blue"
+        app:backgroundColorValue="@color/gray"
         app:fillColor="@color/green"
         app:fillRadius="0.9"
         app:strokeWidth="5"/>
