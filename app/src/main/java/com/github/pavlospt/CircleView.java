@@ -15,10 +15,12 @@ public class CircleView extends View {
 
     private static int DEFAULT_TITLE_COLOR = Color.CYAN;
     private static int DEFAULT_SUBTITLE_COLOR = Color.WHITE;
-	
 
     private static String DEFAULT_TITLE = "Title";
     private static String DEFAULT_SUBTITLE = "Subtitle";
+
+    private static boolean DEFAULT_SHOW_TITLE = true;
+    private static boolean DEFAULT_SHOW_SUBTITLE = true;
 
     private static float DEFAULT_TITLE_SIZE = 25f;
     private static float DEFAULT_SUBTITLE_SIZE = 20f;
@@ -45,6 +47,9 @@ public class CircleView extends View {
     private float mSubtitleSize = DEFAULT_SUBTITLE_SIZE;
     private float mStrokeWidth = DEFAULT_STROKE_WIDTH;
     private float mFillRadius = DEFAULT_FILL_RADIUS;
+
+    private boolean mShowTitle = DEFAULT_SHOW_TITLE;
+    private boolean mShowSubtitle = DEFAULT_SHOW_SUBTITLE;
 
     private TextPaint mTitleTextPaint;
     private TextPaint mSubTextPaint;
@@ -187,16 +192,38 @@ public class CircleView extends View {
 
         canvas.drawOval(mInnerRectF, mStrokePaint);
 
-        canvas.drawText(mTitleText,
-                xPos,
-                yPos,
-                mTitleTextPaint);
+        if (mShowTitle) {
+            canvas.drawText(mTitleText,
+                    xPos,
+                    yPos,
+                    mTitleTextPaint);
+        }
 
-        canvas.drawText(mSubtitleText,
-                xPos,
-                yPos + 20,
-                mSubTextPaint);
+        if (mShowSubtitle) {
+            canvas.drawText(mSubtitleText,
+                    xPos,
+                    yPos + 20,
+                    mSubTextPaint);
+        }
 
+    }
+
+    /**
+     * Sets whether the view's title string will be shown.
+     * @param flag The boolean value.
+     */
+    public void setShowTitle(boolean flag){
+        this.mShowTitle = flag;
+        invalidate();
+    }
+
+    /**
+     * Sets whether the view's subtitle string will be shown.
+     * @param flag The boolean value.
+     */
+    public void setShowSubtitle(boolean flag){
+        this.mShowSubtitle = flag;
+        invalidate();
     }
 
     /**
