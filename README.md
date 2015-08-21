@@ -14,7 +14,7 @@ Attributes to choose from:
 * `subtitleText` - The text in the second row.
 * `titleSize` - The size of the first row text.
 * `subtitleSize` - The size of the second row text.
-* `strokeWidth` - The size of the outter line surrounding the view.
+* `strokeWidthSize` - The size of the outter line surrounding the view.
 * `fillRadius` - The radius of the inner circle.
 * `titleColor` - The color of the first row text.
 * `subtitleColor` - The color of the second row text.
@@ -39,7 +39,7 @@ Example
         app:backgroundColorValue="@color/gray"
         app:fillColor="@color/green"
         app:fillRadius="0.9"
-        app:strokeWidth="5"/>
+        app:strokeWidthSize="5"/>
 ```
 
 How To Use
