@@ -198,7 +198,7 @@ public class CircleView extends View {
                     yPos,
                     mTitleTextPaint);
         }
-
+        // draw SubTitle text
         if (mShowSubtitle) {
             canvas.drawText(mSubtitleText,
                     xPos,
