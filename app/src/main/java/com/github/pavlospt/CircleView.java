@@ -13,6 +13,7 @@ import android.view.View;
 
 public class CircleView extends View {
 
+
     private static int DEFAULT_TITLE_COLOR = Color.CYAN;
     private static int DEFAULT_SUBTITLE_COLOR = Color.WHITE;
 
@@ -145,6 +146,8 @@ public class CircleView extends View {
     }
 
     private void invalidateTextPaints(){
+        mTitleTextPaint.setColor(mTitleColor);
+        mSubTextPaint.setColor(mSubtitleColor);
         mTitleTextPaint.setTextSize(mTitleSize);
         mSubTextPaint.setTextSize(mSubtitleSize);
         invalidate();
@@ -379,4 +382,21 @@ public class CircleView extends View {
         invalidateTextPaints();
     }
 
+    public int getTitleColor() {
+        return mTitleColor;
+    }
+
+    public void setTitleColor(int titleColor) {
+        mTitleColor =titleColor;
+        invalidateTextPaints();
+    }
+
+    public int getSubtitleColor() {
+        return mSubtitleColor;
+    }
+
+    public void setSubtitleColor(int mSubtitleColor) {
+        this.mSubtitleColor = mSubtitleColor;
+        invalidateTextPaints();
+    }
 }
