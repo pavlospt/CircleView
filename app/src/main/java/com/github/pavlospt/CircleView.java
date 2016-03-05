@@ -382,21 +382,37 @@ public class CircleView extends View {
         invalidateTextPaints();
     }
 
+    /**
+     * Gets the title text color attribute value.
+     * @return The text color attribute value.
+     */
     public int getTitleColor() {
         return mTitleColor;
     }
 
+    /**
+     * Sets the view's title text color attribute value.
+     * @param titleColor The title text color attribute value to use.
+     */
     public void setTitleColor(int titleColor) {
         mTitleColor =titleColor;
         invalidateTextPaints();
     }
 
+    /**
+     * Gets the subtitle text color attribute value.
+     * @return The text color attribute value.
+     */
     public int getSubtitleColor() {
         return mSubtitleColor;
     }
 
-    public void setSubtitleColor(int mSubtitleColor) {
-        this.mSubtitleColor = mSubtitleColor;
+    /**
+     * Sets the view's subtitle text color attribute value.
+     * @param subtitleColor The subtitle text color attribute value to use.
+     */
+    public void setSubtitleColor(int subtitleColor) {
+        mSubtitleColor = subtitleColor;
         invalidateTextPaints();
     }
 }
