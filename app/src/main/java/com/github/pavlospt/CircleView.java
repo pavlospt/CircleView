@@ -13,7 +13,6 @@ import android.view.View;
 
 public class CircleView extends View {
 
-
     private static int DEFAULT_TITLE_COLOR = Color.CYAN;
     private static int DEFAULT_SUBTITLE_COLOR = Color.WHITE;
 
@@ -25,6 +24,7 @@ public class CircleView extends View {
 
     private static float DEFAULT_TITLE_SIZE = 25f;
     private static float DEFAULT_SUBTITLE_SIZE = 20f;
+    private static float DEFAULT_TITLE_SUBTITLE_SPACE = 0f;
 
     private static int DEFAULT_STROKE_COLOR = Color.CYAN;
     private static int DEFAULT_BACKGROUND_COLOR = Color.WHITE;
@@ -48,6 +48,7 @@ public class CircleView extends View {
     private float mSubtitleSize = DEFAULT_SUBTITLE_SIZE;
     private float mStrokeWidth = DEFAULT_STROKE_WIDTH;
     private float mFillRadius = DEFAULT_FILL_RADIUS;
+    private float mTitleSubtitleSpace = DEFAULT_TITLE_SUBTITLE_SPACE;
 
     private boolean mShowTitle = DEFAULT_SHOW_TITLE;
     private boolean mShowSubtitle = DEFAULT_SHOW_SUBTITLE;
@@ -101,6 +102,8 @@ public class CircleView extends View {
 
         mStrokeWidth = a.getFloat(R.styleable.CircleView_strokeWidthSize,DEFAULT_STROKE_WIDTH);
         mFillRadius = a.getFloat(R.styleable.CircleView_fillRadius,DEFAULT_FILL_RADIUS);
+
+        mTitleSubtitleSpace = a.getFloat(R.styleable.CircleView_titleSubtitleSpace, DEFAULT_TITLE_SUBTITLE_SPACE);
 
         a.recycle();
 
@@ -205,7 +208,7 @@ public class CircleView extends View {
         if (mShowSubtitle) {
             canvas.drawText(mSubtitleText,
                     xPos,
-                    yPos + 20,
+                    yPos + 20 + mTitleSubtitleSpace,
                     mSubTextPaint);
         }
 
@@ -413,6 +416,23 @@ public class CircleView extends View {
      */
     public void setSubtitleColor(int subtitleColor) {
         mSubtitleColor = subtitleColor;
+        invalidateTextPaints();
+    }
+
+    /**
+     * Gets the title subtitle space attribute value.
+     * @return The title subtitle space attribute value.
+     */
+    public float getTitleSubtitleSpace() {
+        return mTitleSubtitleSpace;
+    }
+
+    /**
+     * Sets the view's title subtitle space attribute value.
+     * @param titleSubtitleSpace The space between title and subtitle attribute value to use.
+     */
+    public void setTitleSubtitleSpace(float titleSubtitleSpace) {
+        this.mTitleSubtitleSpace = titleSubtitleSpace;
         invalidateTextPaints();
     }
 }
