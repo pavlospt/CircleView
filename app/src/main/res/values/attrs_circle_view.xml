@@ -1,9 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CircleView">
         <attr name="titleText" format="string" />
         <attr name="subtitleText" format="string" />
         <attr name="titleSize" format="dimension" />
         <attr name="subtitleSize" format="dimension" />
+        <attr name="titleSubtitleSpace" format="float" />
         <attr name="strokeWidthSize" format="float" />
         <attr name="fillRadius" format="float" />
         <attr name="titleColor" format="color" />
