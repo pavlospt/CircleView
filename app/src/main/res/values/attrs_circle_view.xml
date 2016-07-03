@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CircleView">
-        <attr name="titleText" format="string" />
-        <attr name="subtitleText" format="string" />
-        <attr name="titleSize" format="dimension" />
-        <attr name="subtitleSize" format="dimension" />
-        <attr name="titleSubtitleSpace" format="float" />
-        <attr name="strokeWidthSize" format="float" />
-        <attr name="fillRadius" format="float" />
-        <attr name="titleColor" format="color" />
-        <attr name="subtitleColor" format="color" />
-        <attr name="fillColor" format="color" />
-        <attr name="strokeColorValue" format="color" />
-        <attr name="backgroundColorValue" format="color" />
+        <attr name="cv_titleText" format="string" />
+        <attr name="cv_subtitleText" format="string" />
+        <attr name="cv_titleSize" format="dimension" />
+        <attr name="cv_subtitleSize" format="dimension" />
+        <attr name="cv_titleSubtitleSpace" format="float" />
+        <attr name="cv_strokeWidthSize" format="float" />
+        <attr name="cv_fillRadius" format="float" />
+        <attr name="cv_titleColor" format="color" />
+        <attr name="cv_subtitleColor" format="color" />
+        <attr name="cv_fillColor" format="color" />
+        <attr name="cv_strokeColorValue" format="color" />
+        <attr name="cv_backgroundColorValue" format="color" />
     </declare-styleable>
 </resources>

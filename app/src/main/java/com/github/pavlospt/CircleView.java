@@ -83,27 +83,27 @@ public class CircleView extends View {
         final TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.CircleView, defStyle, 0);
 
-        if(a.hasValue(R.styleable.CircleView_titleText)){
-            mTitleText = a.getString(R.styleable.CircleView_titleText);
+        if(a.hasValue(R.styleable.CircleView_cv_titleText)){
+            mTitleText = a.getString(R.styleable.CircleView_cv_titleText);
         }
 
-        if(a.hasValue(R.styleable.CircleView_subtitleText)){
-            mSubtitleText = a.getString(R.styleable.CircleView_subtitleText);
+        if(a.hasValue(R.styleable.CircleView_cv_subtitleText)){
+            mSubtitleText = a.getString(R.styleable.CircleView_cv_subtitleText);
         }
 
-        mTitleColor = a.getColor(R.styleable.CircleView_titleColor,DEFAULT_TITLE_COLOR);
-        mSubtitleColor = a.getColor(R.styleable.CircleView_subtitleColor,DEFAULT_SUBTITLE_COLOR);
-        mBackgroundColor = a.getColor(R.styleable.CircleView_backgroundColorValue,DEFAULT_BACKGROUND_COLOR);
-        mStrokeColor = a.getColor(R.styleable.CircleView_strokeColorValue,DEFAULT_STROKE_COLOR);
-        mFillColor = a.getColor(R.styleable.CircleView_fillColor,DEFAULT_FILL_COLOR);
+        mTitleColor = a.getColor(R.styleable.CircleView_cv_titleColor,DEFAULT_TITLE_COLOR);
+        mSubtitleColor = a.getColor(R.styleable.CircleView_cv_subtitleColor,DEFAULT_SUBTITLE_COLOR);
+        mBackgroundColor = a.getColor(R.styleable.CircleView_cv_backgroundColorValue,DEFAULT_BACKGROUND_COLOR);
+        mStrokeColor = a.getColor(R.styleable.CircleView_cv_strokeColorValue,DEFAULT_STROKE_COLOR);
+        mFillColor = a.getColor(R.styleable.CircleView_cv_fillColor,DEFAULT_FILL_COLOR);
 
-        mTitleSize = a.getDimension(R.styleable.CircleView_titleSize,DEFAULT_TITLE_SIZE);
-        mSubtitleSize = a.getDimension(R.styleable.CircleView_subtitleSize,DEFAULT_SUBTITLE_SIZE);
+        mTitleSize = a.getDimension(R.styleable.CircleView_cv_titleSize,DEFAULT_TITLE_SIZE);
+        mSubtitleSize = a.getDimension(R.styleable.CircleView_cv_subtitleSize,DEFAULT_SUBTITLE_SIZE);
 
-        mStrokeWidth = a.getFloat(R.styleable.CircleView_strokeWidthSize,DEFAULT_STROKE_WIDTH);
-        mFillRadius = a.getFloat(R.styleable.CircleView_fillRadius,DEFAULT_FILL_RADIUS);
+        mStrokeWidth = a.getFloat(R.styleable.CircleView_cv_strokeWidthSize,DEFAULT_STROKE_WIDTH);
+        mFillRadius = a.getFloat(R.styleable.CircleView_cv_fillRadius,DEFAULT_FILL_RADIUS);
 
-        mTitleSubtitleSpace = a.getFloat(R.styleable.CircleView_titleSubtitleSpace, DEFAULT_TITLE_SUBTITLE_SPACE);
+        mTitleSubtitleSpace = a.getFloat(R.styleable.CircleView_cv_titleSubtitleSpace, DEFAULT_TITLE_SUBTITLE_SPACE);
 
         a.recycle();
 
