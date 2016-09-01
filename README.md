@@ -26,7 +26,7 @@ Attributes to choose from:
 Example
 =======
 ```xml
- <com.github.circleView
+ <com.github.pavlospt.CircleView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="300dp"
         android:layout_height="300dp"
