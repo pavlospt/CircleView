@@ -1,6 +1,21 @@
-.gradle
-/local.properties
-.DS_Store
+# Build artifacts
+.gradle/
 build/
-.idea
-/gradlew/wrapper
+bin/
+gen/
+
+# IDE & Editor files
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+.vscode/
+
+# Local configuration & secrets
+local.properties
+.DS_Store
+*.swp
+*.bak

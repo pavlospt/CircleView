@@ -1,90 +1,165 @@
-CircleView
-==========
+# CircleView Compose 🎨
 
-A Circle View containing Title and Subtitle
+[![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-2.0-brightgreen.svg?style=flat&logo=android)](https://developer.android.com/jetpack/compose)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.1.0-blue.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
+[![Android Min SDK](https://img.shields.io/badge/Min%20SDK-21+-orange.svg?style=flat&logo=android)](https://developer.android.com)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.pavlospt/circleview.svg)](https://search.maven.org/artifact/io.github.pavlospt/circleview)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-[ ![Download](https://api.bintray.com/packages/pavlospt/android-libraries/CircleView/images/download.svg) ](https://bintray.com/pavlospt/android-libraries/CircleView/_latestVersion)
+A modern, highly customizable **CircleView** component for Android built 100% in **Jetpack Compose** and **Kotlin**. Easily build sleek progress circles, stat badges, dashboard widgets, and interactive circular UI elements.
 
-[![Android Arsenal](http://img.shields.io/badge/Android%20Arsenal-CircleView-blue.svg)](http://android-arsenal.com/details/1/796)
+---
 
-![CircleView](/Screenshots/Screenshot_8.png)
+## 📱 Screenshots & Showcase
 
-Attributes to choose from:
+| Interactive Playground | Color Presets | Showcase Widgets |
+|:---:|:---:|:---:|
+| <img src="Screenshots/playground.png" width="280" alt="Playground"/> | <img src="Screenshots/presets.png" width="280" alt="Color Presets"/> | <img src="Screenshots/showcase.png" width="280" alt="Showcase Widgets"/> |
 
-* `cv_titleText` - The text in the first row.
-* `cv_subtitleText` - The text in the second row.
-* `cv_titleSize` - The size of the first row text.
-* `cv_subtitleSize` - The size of the second row text.
-* `cv_strokeWidthSize` - The size of the outter line surrounding the view.
-* `cv_fillRadius` - The radius of the inner circle.
-* `cv_titleColor` - The color of the first row text.
-* `cv_subtitleColor` - The color of the second row text.
-* `cv_fillColor` - The color of the inner circle.
-* `cv_strokeColorValue` - The color of the outter line circle.
-* `cv_backgroundColorValue` - the color between the circle and the stroke.
+---
 
-Example
-=======
-```xml
- <com.github.pavlospt.CircleView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:cv_titleText="title"
-        app:cv_subtitleText="subtitle"
-        app:cv_titleSize="12dp"
-        app:cv_subtitleSize="9dp"
-        app:cv_titleColor="@color/white"
-        app:cv_subtitleColor="@color/red"
-        app:cv_strokeColorValue="@color/blue"
-        app:cv_backgroundColorValue="@color/gray"
-        app:cv_fillColor="@color/green"
-        app:cv_fillRadius="0.9"
-        app:cv_strokeWidthSize="5"/>
+## ✨ Features
+
+- ⚡ **100% Pure Jetpack Compose**: Native `@Composable` implementation optimized for performance and smooth re-composition.
+- 🎨 **Fully Customizable**: Control stroke width, inner fill radius, background color, stroke color, fill color, text styling, and spacing.
+- 💫 **Built-in Smooth Animations**: Parameter changes (colors, sizes, radius) automatically animate with smooth state transitions.
+- 📱 **Interactive Sample App**: Explore live sliders, presets (Cyberpunk, Solar Gold, Neon Mint, Emerald), and showcase widgets.
+- 🌐 **Maven Central Release**: Official GPG-signed package published directly on Maven Central.
+
+---
+
+## 📦 How to Include in Your Project
+
+### Maven Central Import
+
+Add the dependency directly to your module's `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("io.github.pavlospt:circleview:2.0.0")
+}
 ```
 
-How To Use
-==========
+---
 
-You can search us on *Gradle,please* http://gradleplease.appspot.com/ or just add
+## 🚀 Quick Start
 
-the dependency to your module's `build.gradle` file:
+### Basic Usage in Compose
 
-```compile 'com.github.pavlospt:circleview:1.3' ```
+```kotlin
+import androidx.compose.foundation.layout.size
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import io.github.pavlospt.circleview.CircleView
 
+@Composable
+fun FitnessWidget() {
+    CircleView(
+        modifier = Modifier.size(200.dp),
+        titleText = "8,420",
+        subtitleText = "STEPS",
+        titleSize = 28.sp,
+        subtitleSize = 14.sp
+    )
+}
+```
 
-Credits
-=======
-Author : Pavlos-Petros Tournaris (p.tournaris@gmail.com)
+### Animated CircleView with Custom Colors
 
-Google+ : [+Pavlos-Petros Tournaris](https://plus.google.com/u/0/+PavlosPetrosTournaris/)
+```kotlin
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import io.github.pavlospt.circleview.CircleView
 
-Facebook : [Pavlos-Petros Tournaris](https://www.facebook.com/pavlospt)
+CircleView(
+    modifier = Modifier.size(220.dp),
+    titleText = "22.5°C",
+    subtitleText = "HEATING",
+    titleColor = Color(0xFFFDBA74),
+    subtitleColor = Color(0xFFFED7AA),
+    strokeColor = Color(0xFFF97316),
+    backgroundColor = Color(0xFF451A03),
+    fillColor = Color(0xFF7C2D12),
+    strokeWidth = 6.dp,
+    fillRadius = 0.85f,
+    titleSubtitleSpace = 6.dp,
+    animated = true // Enables smooth color & geometry transitions when state changes
+)
+```
 
-LinkedIn : [Pavlos-Petros Tournaris](https://www.linkedin.com/pub/pavlos-petros-tournaris/44/abb/218)
+---
 
-Thanks to [+Filip Puđak](https://plus.google.com/u/0/117550349320705739707/) and his ProgressPieView that helped me think and create this View.
+## 📋 Parameters Reference
 
-(In case you use this in your app let me know to make a list of apps that use it! )
+| Parameter | Type | Default Value | Description |
+|---|---|---|---|
+| `titleText` | `String` | `"Title"` | Text displayed in the top row |
+| `subtitleText` | `String` | `"Subtitle"` | Text displayed in the bottom row |
+| `titleSize` | `TextUnit` | `25.sp` | Font size of the title text |
+| `subtitleSize` | `TextUnit` | `20.sp` | Font size of the subtitle text |
+| `titleColor` | `Color` | `Color(0xFF00E5FF)` | Color of the title text |
+| `subtitleColor` | `Color` | `Color(0xFFFFFFFF)` | Color of the subtitle text |
+| `strokeColor` | `Color` | `Color(0xFF00E5FF)` | Color of the outer circle border stroke |
+| `backgroundColor` | `Color` | `Color(0xFFFFFFFF)` | Color of background circle between stroke & fill |
+| `fillColor` | `Color` | `Color(0xFF333333)` | Color of the inner filled circle |
+| `strokeWidth` | `Dp` | `5.dp` | Thickness of outer stroke ring |
+| `fillRadius` | `Float` | `0.9f` | Radius ratio of inner circle relative to outer circle (0.0 to 1.0) |
+| `titleSubtitleSpace` | `Dp` | `4.dp` | Vertical space separating title and subtitle |
+| `showTitle` | `Boolean` | `true` | Visibility toggle for title text |
+| `showSubtitle` | `Boolean` | `true` | Visibility toggle for subtitle text |
+| `animated` | `Boolean` | `false` | Enables smooth animation on attribute changes |
 
-Apps using this library
-=======================
+---
 
-Hungry (https://play.google.com/store/apps/details?id=com.hungry)
+## 🛠️ Publishing Setup (Maven Central)
 
-License
-=======
+This repository uses **`com.vanniktech.maven.publish`** to publish signed artifacts (Kotlin sources, Dokka javadoc, and AAR/JAR binaries) directly to **Sonatype Central Portal**.
 
-    Copyright 2014 Pavlos-Petros Tournaris
+### 1. Publish to Maven Central
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+Deploy to Maven Central with your Sonatype credentials:
 
-       http://www.apache.org/licenses/LICENSE-2.0
+```bash
+./gradlew publishAndReleaseToMavenCentral \
+  -PmavenCentralUsername="YOUR_SONATYPE_USER_TOKEN" \
+  -PmavenCentralPassword="YOUR_SONATYPE_USER_PASSWORD"
+```
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+### 2. Publish Locally for Testing
+
+```bash
+./gradlew publishToMavenLocal
+```
+
+---
+
+## 👥 Credits
+
+**Author**: Pavlos-Petros Tournaris ([p.tournaris@gmail.com](mailto:p.tournaris@gmail.com))
+
+- **GitHub**: [@pavlospt](https://github.com/pavlospt)
+- **LinkedIn**: [Pavlos-Petros Tournaris](https://www.linkedin.com/in/pavlos-petros-tournaris-44abb218/)
+
+---
+
+## 📄 License
+
+```text
+Copyright 2014-2026 Pavlos-Petros Tournaris
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
